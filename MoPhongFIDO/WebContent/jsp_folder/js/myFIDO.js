@@ -22,11 +22,11 @@ MyApp.prototype.init = function(param)
 	this.camera.position.set( 0, 0.5, 9 );
 	
 	var cube = new Cube();
-	cube.init( 3, 2, 1,'FIDO U2F','./jsp_folder/images/howfidowork_vi.png');
+	cube.init( 3, 2, 1,'FIDO WOR','./jsp_folder/images/howfidowork_vi.png');
 	this.addObject(cube);
 	
 	var cube2 = new Cube();
-	cube2.init( -3, 2, 1,'FIDO UAF','./jsp_folder/images/whatisFIDO_vi.png');
+	cube2.init( -3, 2, 1,'FIDO WHA','./jsp_folder/images/whatisFIDO_vi.png');
 	this.addObject(cube2);
 	
 	var cube3 = new Cube2();
@@ -66,9 +66,9 @@ Cube.prototype.handleMouseDown = function(x, y, position)
 	this.mesh.scale.set(1.05, 1.05, 1.05);
 	this.mesh.material.ambient.setRGB(.777,.777,.777);
 	//alert("You select: " +this.name + ". Thank you for your selection!");
-	if(this.name == "FIDO UAF") //for uaf
+	if(this.name == "FIDO WHA") //for uaf
 	 document.location.href="Whatis"; 
-	else if(this.name =="FIDO U2F")
+	else if(this.name =="FIDO WOR")
 		document.location.href="Fidowork";
 	else if(this.name =="FIDO USE")
 		document.location.href="Howuse";
@@ -105,15 +105,15 @@ Cube.prototype.update = function()
 {
 	// "I feel the Earth move..."
 	//this.object3D.rotation.y += Cube.ROTATION_Y;
-	if(this.name == "FIDO UAF")
+	if(this.name == "FIDO WHA")
 	this.object3D.rotation.x += Cube.ROTATION_X;
 	else
-		this.object3D.rotation.y += Cube.ROTATION_X;
+		this.object3D.rotation.y += Cube.ROTATION_Y;
 }
 
 
 Cube.ROTATION_X = 0.0050;
-Cube.ROTATION_Y = 0.0025;
+Cube.ROTATION_Y = 0.0075;
 Cube.TILT = 0.41;
 
 //cube 2
@@ -130,7 +130,7 @@ Cube2.prototype.init = function(x,y,z, name, imagepath)
 	var material = new THREE.MeshPhongMaterial({
         map: THREE.ImageUtils.loadTexture(imagepath)
     });
-    var geometry = new THREE.CubeGeometry(1,1,0.5);
+    var geometry = new THREE.CubeGeometry(1,1,1);
     cube2 = new THREE.Mesh( geometry, material );
     cube2.rotation.x = Math.PI / 5;
     cube2.rotation.y = Math.PI / 5;
@@ -149,9 +149,9 @@ Cube2.prototype.handleMouseDown = function(x, y, position)
 	this.mesh.scale.set(1.05, 1.05, 1.05);
 	this.mesh.material.ambient.setRGB(.777,.777,.777);
 	//alert("You select: " +this.name + ". Thank you for your selection!");
-	if(this.name == "FIDO UAF") //for uaf
+	if(this.name == "FIDO WHA") //for uaf
 	 document.location.href="Whatis"; 
-	else if(this.name =="FIDO U2F")
+	else if(this.name =="FIDO WOR")
 		document.location.href="Fidowork";
 	else if(this.name =="FIDO USE")
 		document.location.href="Howuse";
@@ -191,7 +191,7 @@ Cube2.prototype.update = function()
 	if(this.name == "FIDO UAF")
 	this.object3D.rotation.x += Cube2.ROTATION_X;
 	else
-		this.object3D.rotation.z += Cube2.ROTATION_X;
+		this.object3D.rotation.y += Cube2.ROTATION_X;
 }
 
 

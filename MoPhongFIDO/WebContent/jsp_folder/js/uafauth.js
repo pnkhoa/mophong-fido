@@ -177,7 +177,7 @@ function goSteps2(){
     		$('#prompt2').css('display', 'none');
     		$('#container').css('display', 'block');
     		$('#container').css('position', 'absolute');
-		},1000)
+		},3000)
 	}
 	setTimeout(function(){
 		controls[3].control.moving(steps[step].to);
@@ -189,7 +189,16 @@ function goSteps2(){
 		setTimeout(function(){
 			controls[3].control.moving(steps[step].to);
 			step=step+1;
-			if(step>11)clearInterval(go);
+			if(step>11)
+				{
+				clearInterval(go);
+				if (window.confirm('Bạn vừa xem phần trình diễn xác thực tài khoản FIDO UAF. Vui lòng thực hiện phần khảo sát ý kiến người dùng để hệ thống được hoàn thiện hơn.\nChọn OK để đi đến phần khảo sát. Chọn CANCEL để ở lại trang mô phỏng.\nXin Cảm ơn!' )) 
+				{
+					//window.location.href='https://goo.gl/abPFMc';
+					 window.open('https://goo.gl/abPFMc','_blank');
+				};
+				}
+				
 		},readingTime);
 	},loopingTime);
 }

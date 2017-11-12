@@ -10,6 +10,9 @@
 p, a span {
     color: #000;
 }
+body {
+    background-color: #ffffff !important;
+}
 	</style>
 <title>FIDO U2F Works</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -45,11 +48,13 @@ p, a span {
 	</script>
 </head>
 <body>
-	<center><h1>FIDO U2F</h1>
+	<center><h1>HOẠT ĐỘNG FIDO U2F</h1>
 	<h3>Giao thức xác thực hai yếu tố</h3>
-	<h2><a href="${pageContext.request.contextPath}/FIDOu2fReg">Đăng ký tài khoản</a></h2>
+<%-- 	<h2><a href="${pageContext.request.contextPath}/FIDOu2fReg">Đăng ký tài khoản</a></h2>
 	<br>
-    <h2><a href="${pageContext.request.contextPath}/FIDOu2fauth">Xác thực tài khoản</a></h2>
+    <h2><a href="${pageContext.request.contextPath}/FIDOu2fauth">Xác thực tài khoản</a></h2> --%>
+    
+    <h4>Vui lòng chọn vào từng khối để xem hoạt động đăng ký hoặc xác thực tài khoản FIDO U2F!</h4>
 	</center>
 	
     <div id="container" style="width:100%; height:80%; position:absolute;">

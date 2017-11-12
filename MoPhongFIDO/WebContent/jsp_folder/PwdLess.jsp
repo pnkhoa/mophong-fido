@@ -52,6 +52,7 @@ p, a span {
 			<h4>Vui lòng chọn biểu tượng<img style="width: 40px;height: 40px;" alt="" src="${pageContext.request.contextPath}/jsp_folder/images/PlayButton1.png">để bắt đầu</h4>
 		</div>
    		<div id="container" style="width:100%; height:80%; position:absolute;"></div>
+   		<br>
    		<div id="prompt" style="width:100%; height:6%; bottom:0; text-align:center; display:none">
 			<div class="contentarea">
 			    <h1>
@@ -78,7 +79,7 @@ p, a span {
 			</div>
 		</div>
 		
-		<div id="prompt" style="width:100%; height:6%; bottom:0; text-align:center; position:absolute; padding-top: 10px;">
+		<div id="prompt" style="width:100%; height:6%; bottom:0; text-align:center; position:absolute; padding-top: 15px;">
 	<a href="${pageContext.request.contextPath}/">Trang chủ</a> | <a href="${pageContext.request.contextPath}/FIDOuafReg">Làm mới</a>
 	</div>
 	<script>

@@ -10,6 +10,9 @@
 p, a span {
     color: #000;
 }
+body {
+    background-color: #ffffff !important;
+}
 	</style>
 <title>FIDO Works</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">

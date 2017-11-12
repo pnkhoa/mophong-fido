@@ -5,17 +5,17 @@ var Pos3 =  [0,3,0];
 var Pos4 =  [2,3,0];
 var Pos5 =  [4,3,0];*/
 
-var Poses =  [[0,4,0],[2,4,0],[4,4,0],[6,3,0],[5,1,1],[-2,4,0],[-4,4,0],[-6,3,0],[-5,1,1]];
+var Poses =  [[0,4,0],[2,4,0],[4,4,0],[5.7,2.7,0],[4.4,0.7,1],[-2,4,0],[-4,4,0],[-5.7,2.7,0],[-4.4,0.7,1]];
 var Pos1 = 	[0,4,0];
 var Pos2 =  [2,4,0];
 var Pos3 =  [4,4,0];
-var Pos4 =  [6,3,0];
-var Pos5 =  [5,1,1];
+var Pos4 =  [5.7,2.7,0];
+var Pos5 =  [4.4,0.7,1];
 
 var Pos6 =  [-2,4,0];
 var Pos7 =  [-4,4,0];
-var Pos8 =  [-6,3,0];
-var Pos9 =  [-5,1,1];
+var Pos8 =  [-5.7,2.7,0];
+var Pos9 =  [-4.4,0.7,1];
 var movingTime  = 1000;
 var readingTime = 4000;
 var loopingTime = 7000;
@@ -130,14 +130,17 @@ Control.prototype.init = function(param)
     this.setObject3D(mesh);
     mesh.scale.set(2,2,2);
     this.mesh = mesh;
-    this.selected = false;
+    
     this.overCursor = 'pointer';
 }
 
 Control.prototype.handleMouseOver = function(x, y)
 {
+	if(this.id == Control.ID_H2U1 || this.id == Control.ID_H2U3 || this.id == Control.ID_H2U5)
+		{
 	this.mesh.scale.set(2.8, 2.8, 2.8);
 	this.mesh.material.ambient.setRGB(.777,.777,.777);
+		}
 }
 
 Control.prototype.handleMouseOut = function(x, y)
@@ -156,12 +159,70 @@ Control.ID_H2U4 = 6;
 Control.ID_H2U5 = 7;
 Control.ID_ARR3 = 8;
 Control.ID_ARR4 = 9;
+Control.SelectID = false;
 
 Control.prototype.handleMouseDown = function()
 {
-	if(this.selected == false){
-		this.selected = true;
+	if(this.id == Control.ID_H2U5) //for uaf
+		{
+		var modal = document.getElementById('myModal');
+		var modalImg = document.getElementById("img01");
+		var captionText = document.getElementById("caption");
+		modal.style.display = "block";
+	    //modalImg.src = this.src;
+	    modalImg.src = "./jsp_folder/images/uaf_vi.png";
+	    captionText.innerHTML = "FIDO UAF";
+	    
+	 // Get the <span> element that closes the modal
+	    var span = document.getElementsByClassName("close")[0];
+
+	    // When the user clicks on <span> (x), close the modal
+	    span.onclick = function() { 
+	        modal.style.display = "none";
+	    	}
+		}
+	else if(this.id == Control.ID_H2U3) //for u2f
+		{
+		var modal = document.getElementById('myModal');
+		var modalImg = document.getElementById("img01");
+		var captionText = document.getElementById("caption");
+		modal.style.display = "block";
+	    //modalImg.src = this.src;
+	    modalImg.src = "./jsp_folder/images/u2f_vi.png";
+	    captionText.innerHTML = "FIDO U2F";
+	    
+	 // Get the <span> element that closes the modal
+	    var span = document.getElementsByClassName("close")[0];
+
+	    // When the user clicks on <span> (x), close the modal
+	    span.onclick = function() { 
+	        modal.style.display = "none";
+	    	}
+		
+		}
+	else if(this.id == Control.ID_H2U1) //for u2f
+	{
+	var modal = document.getElementById('myModal');
+	var modalImg = document.getElementById("img01");
+	var captionText = document.getElementById("caption");
+	modal.style.display = "block";
+    //modalImg.src = this.src;
+    modalImg.src = "./jsp_folder/images/whatisFIDO2.png";
+    captionText.innerHTML = "FIDO ALLIANCE";
+    
+ // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() { 
+        modal.style.display = "none";
+    	}
+	
+	}
+	if(Control.SelectID == false){
+		Control.SelectID = true;
 		showSteps();
+		//alert(this.id);
 		
 	}else
 		return;
@@ -183,8 +244,14 @@ Control.prototype.moving = function(pos){
 	
 	
 }
+
 var id = 8;
 function showSteps(){
+	if(Control.SelectID == false){
+		Control.SelectID = true;
+	}
+	else
+		return;
 	
 	var pos = 0;
 	setImageToIcon(id); 
@@ -195,13 +262,7 @@ function showSteps(){
 		controls[id].control.moving(Poses[pos]);
 		id=id-1;
 		pos=pos+1;
-		//if(id < 0)clearInterval(go);
-		/*if(pos >= 9)
-			{
-			setTimeout( 
-			alert("Bạn vừa xem phần trình diễn FIDO là gì. Vui lòng thực hiện phần khảo sát ý kiến người dùng để chúng tôi được phục vụ bạn tốt hơn. Xin cảm ơn!")
-			,4000);
-			}*/
+		
 			},2000);
 	
 }

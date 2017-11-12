@@ -154,7 +154,12 @@ function goSteps(){
 			step=step+1;
 			if(step>=12)
 				{clearInterval(go);
-				alert("Bạn vừa xem phần trình diễn xác thực tài khoản FIDO U2F. Vui lòng thực hiện phần khảo sát ý kiến người dùng để chúng tôi được phục vụ bạn tốt hơn. Xin cảm ơn!");
+				//alert("Bạn vừa xem phần trình diễn xác thực tài khoản FIDO U2F. Vui lòng thực hiện phần khảo sát ý kiến người dùng để chúng tôi được phục vụ bạn tốt hơn. Xin cảm ơn!");
+				if (window.confirm('Bạn vừa xem phần trình diễn xác thực tài khoản FIDO U2F. Vui lòng thực hiện phần khảo sát ý kiến người dùng để hệ thống được hoàn thiện hơn.\nChọn OK để đi đến phần khảo sát. Chọn CANCEL để ở lại trang mô phỏng.\nXin Cảm ơn!' )) 
+				{
+					//window.location.href='https://goo.gl/abPFMc';
+					 window.open('https://goo.gl/abPFMc','_blank');
+				};
 				}
 		},readingTime);
 	},loopingTime);

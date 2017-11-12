@@ -16,7 +16,11 @@
 	<script src="${pageContext.request.contextPath}/jsp_folder/sim/animation.js"></script>
 <script src="${pageContext.request.contextPath}/jsp_folder/js/myFIDO.js"></script>
 
-
+<style type="text/css">
+body {
+    background-color: #ffffff !important;
+}
+</style>
 	<script>
 
 	var renderer = null;
@@ -40,12 +44,16 @@
 </head>
 <body>
 <div style="text-align: center;">
-<h1>MÔ PHỎNG FIDO</h1>
-
+<h1>HỆ THỐNG MÔ PHỎNG GIẢI PHÁP KỸ THUẬT FIDO</h1>
+<h3>Hệ thống sử dụng hình ảnh minh họa 2D hoặc 3D để mô phỏng lại toàn bộ hoạt động của giải pháp kỹ thuật FIDO.</h3>
+<h4>Vui lòng chọn vào từng khối bên dưới để xem mô phỏng.</h4>
 <%-- <br>
 <a href="${pageContext.request.contextPath}/Home1">Click here to view FIDO Graphic </a> --%>
 <br>
-<h3>
+
+
+
+<%-- <h3>
 <a style= "color: blue;" href="${pageContext.request.contextPath}/Whatis">FIDO là gì? </a>
 </h3>
 <h3>
@@ -53,11 +61,11 @@
 </h3>
 <h3>
 <a style= "color: blue;" href="${pageContext.request.contextPath}/Fidowork">FIDO hoạt động như thế nào? </a>
-</h3>
+</h3> --%>
 <div id="container" style="width:95%; height:80%; position:absolute;"></div>
-		<%-- 	<div id="prompt" style="width:95%; height:6%; bottom:0; text-align:center; position:absolute;">
-	<a href="${pageContext.request.contextPath}">Refresh</a>
-	</div> --%>
+		 	<div id="prompt" style="width:95%; height:6%; bottom:0; text-align:center; position:absolute;">
+	<a href="https://goo.gl/abPFMc" target="_blank">Khảo sát hệ thống mô phỏng</a>
+	</div> 
 </div>
 </body>
 </html>

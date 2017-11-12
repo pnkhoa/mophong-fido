@@ -218,7 +218,7 @@ img.onclick = function(){
     modal.style.display = "block";
     //modalImg.src = this.src;
     modalImg.src = "./jsp_folder/images/uaf.png";
-    captionText.innerHTML = this.alt;
+    captionText.innerHTML = "FIDO UAF";
 }
 
 // Get the <span> element that closes the modal

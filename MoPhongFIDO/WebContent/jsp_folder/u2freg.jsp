@@ -10,6 +10,9 @@
 p, a span {
     color: #000;
 }
+body {
+    background-color: #ffffff !important;
+}
 	</style>
 		<title>FIDO U2F Registration</title>
 		<link rel="stylesheet" href="${pageContext.request.contextPath}/jsp_folder/css/webglbook.css" />

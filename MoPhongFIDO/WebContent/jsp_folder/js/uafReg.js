@@ -81,7 +81,11 @@ function setImageToIcon(id){
 									    			map:THREE.ImageUtils.loadTexture("./jsp_folder/images/fidouafReg10.png") } );
 
 										controls[id1].control.select1(-4,3,0);
-										alert("Bạn vừa xem phần trình diễn đăng ký tài khoản FIDO UAF. Vui lòng thực hiện phần khảo sát ý kiến người dùng để chúng tôi được phục vụ bạn tốt hơn. Xin cảm ơn!");
+										if (window.confirm('Bạn vừa xem phần trình diễn đăng ký tài khoản FIDO UAF. Vui lòng thực hiện phần khảo sát ý kiến người dùng để hệ thống được hoàn thiện hơn.\nChọn OK để đi đến phần khảo sát. Chọn CANCEL để ở lại trang mô phỏng.\nXin Cảm ơn!' )) 
+										{
+											//window.location.href='https://goo.gl/abPFMc';
+											 window.open('https://goo.gl/abPFMc','_blank');
+										};
 									}, 4000);
 
 									
@@ -170,7 +174,12 @@ function setImageToIcon(id){
 									    			map:THREE.ImageUtils.loadTexture("./jsp_folder/images/fidouafReg10.png") } );
 
 										controls[id1].control.select1(-4,3,0);
-										alert("Bạn vừa xem phần trình diễn đăng ký tài khoản FIDO UAF. Vui lòng thực hiện phần khảo sát ý kiến người dùng để chúng tôi được phục vụ bạn tốt hơn. Xin cảm ơn!");
+										//alert("Bạn vừa xem phần trình diễn đăng ký tài khoản FIDO UAF. Vui lòng thực hiện phần khảo sát ý kiến người dùng để chúng tôi được phục vụ bạn tốt hơn. Xin cảm ơn!");
+										if (window.confirm('Bạn vừa xem phần trình diễn đăng ký tài khoản FIDO UAF. Vui lòng thực hiện phần khảo sát ý kiến người dùng để hệ thống được hoàn thiện hơn.\nChọn OK để đi đến phần khảo sát. Chọn CANCEL để ở lại trang mô phỏng.\nXin Cảm ơn!' )) 
+										{
+											//window.location.href='https://goo.gl/abPFMc';
+											 window.open('https://goo.gl/abPFMc','_blank');
+										};
 									}, 4000);
 									
 								}, 3000);

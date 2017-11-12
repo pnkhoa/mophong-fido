@@ -10,6 +10,9 @@
 p, a span {
     color: #000;
 }
+body {
+    background-color: #ffffff !important;
+}
 	</style>
 		<title>FIDO UAF Works</title>
 		<link rel="stylesheet" href="${pageContext.request.contextPath}/jsp_folder/css/webglbook.css" />
@@ -62,7 +65,7 @@ p, a span {
 			        <video id="video">Video stream not available.</video>
 			        <img style="display:none" id="photo" height="280" width="320" src="${pageContext.request.contextPath}/jsp_folder/images/facewomen.png"/>
 			        <br/>
-			        <button id="startbutton">Chụp ảnho</button>
+			        <button id="startbutton">Chụp ảnh</button>
 			    </div>
 			    <canvas id="canvas" style="display:none"></canvas>
 			</div>
@@ -70,7 +73,7 @@ p, a span {
 		<div id="prompt2" style="width:95%; height:6%; bottom:0; text-align:center; display:none">
 			<div class="contentarea">
 			    <h1>
-			        So sánh với cái có sẵn  
+			        So sánh với ảnh đã đăng ký  
 			    </h1>
 			    <div style="text-align:center">
 					<img id="photox1" height="240" width="320" />

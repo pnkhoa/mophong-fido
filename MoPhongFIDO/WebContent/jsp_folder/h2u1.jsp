@@ -52,8 +52,8 @@ p, a span {
 			<h3>Giao thức không dùng mật khẩu</h3>
 <!-- 			<button onClick="showSteps()">Vui lòng nhấp chọn vào đây để bắt đầu</button> -->
 			
-						<a href="${pageContext.request.contextPath}/"><img style="width: 50px;height: 50px;" alt="" src="${pageContext.request.contextPath}/jsp_folder/images/home.png" >  </a>
-			<img style="width: 50px;height: 50px;" alt="" src="${pageContext.request.contextPath}/jsp_folder/images/Play1Hot.png" onclick="showSteps();">
+						<a href="${pageContext.request.contextPath}/"><img style="width: 50px;height: 50px;" alt="" src="${pageContext.request.contextPath}/jsp_folder/images/home.png" >&nbsp; </a>
+			<img style="width: 50px;height: 50px;" alt="" src="${pageContext.request.contextPath}/jsp_folder/images/Play1Hot.png" onclick="showSteps();">&nbsp;
 		<a href="${pageContext.request.contextPath}/h2uUAF"><img style="width: 50px;height: 50px;" alt="" src="${pageContext.request.contextPath}/jsp_folder/images/reload.png" >  </a>
 		
 			
