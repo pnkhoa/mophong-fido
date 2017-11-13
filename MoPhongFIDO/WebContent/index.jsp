@@ -64,7 +64,7 @@ body {
 </h3> --%>
 <div id="container" style="width:95%; height:80%; position:absolute;"></div>
 		 	<div id="prompt" style="width:95%; height:6%; bottom:0; text-align:center; position:absolute;">
-	<a href="https://goo.gl/abPFMc" target="_blank">Khảo sát hệ thống mô phỏng</a>
+	<a href="https://goo.gl/abPFMc" target="_blank">Vui lòng thực hiện khảo sát hệ thống mô phỏng sau khi xem xong hệ thống. Xin chân thành cảm ơn!</a>
 	</div> 
 </div>
 </body>
