@@ -1,0 +1,92 @@
+<html> 
+ <head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ <link rel="stylesheet" href="${pageContext.request.contextPath}/jsp_folder/css/webglbook.css" />
+ <script src="${pageContext.request.contextPath}/jsp_folder/libs/Three.js"></script>
+ <script src="${pageContext.request.contextPath}/jsp_folder/libs/RequestAnimationFrame.js"></script>
+ <script src="${pageContext.request.contextPath}/jsp_folder/libs/Tween.js"></script>
+ <script src="${pageContext.request.contextPath}/jsp_folder/libs/jquery-1.6.4.js"></script>
+     <script src="${pageContext.request.contextPath}/jsp_folder/libs/jquery.mousewheel.js"></script>
+	<script src="${pageContext.request.contextPath}/jsp_folder/libs/sim.js"></script>
+	<script src="${pageContext.request.contextPath}/jsp_folder/sim/animation.js"></script>
+<script src="${pageContext.request.contextPath}/jsp_folder/js/myFIDO.js"></script>
+<script src="${pageContext.request.contextPath}/jsp_folder/js/myFIDO1.js"></script>
+</head> <body>  <script> var
+scene, camera, renderer; var geometry, material; var modarray=[];
+var material=[]; var rotation=0; init(); animate(); function init() 
+{
+
+
+    renderer = new THREE.WebGLRenderer();
+    //renderer.setPixelRatio(window.devicePixelRatio);
+        renderer.setSize( window.innerWidth, 100 );
+        document.body.appendChild( renderer.domElement );
+
+    ///////////     // Camera//     ///////////
+        camera = new THREE.OrthographicCamera( window.innerWidth / - 2, 
+
+window.innerWidth / 2, 100 / 2, 100 / - 2, - 500, 1000 );
+        camera.position.z = 2000;   camera.position.y = 0;  camera.position.x = 0;  scene= new THREE.Scene();
+        geometry = new THREE.BoxGeometry( 50, 50, 50 );     geometry2 = new THREE.BoxGeometry( 50, 50, 50 );
+
+    ///////////////////////////////     // Store Materials for blocks//
+    /////////////////////////////// var bricks;         material[0] = new
+THREE.MeshPhongMaterial( { map: 
+
+THREE.ImageUtils.loadTexture('10.png') } );
+
+var basex=-455; //////////////////////////////////////////////////
+// Vector array to hold where UV will be placed //
+////////////////////////////////////////////////// bricks = [new
+THREE.Vector2(1, 0), new THREE.Vector2(1, 1), new 
+
+THREE.Vector2(0, 1), new THREE.Vector3(0, 0)];
+
+///////////////////////////////////////////////////// // choose what
+face this eccects from vertex array //  // in this case backside    
+// // choose the orientation of the triangles         //
+/////////////////////////////////////////////////////
+geometry.faceVertexUvs[0][10] = [ bricks[0], bricks[1], bricks[3]];
+geometry.faceVertexUvs[0][11] = [ bricks[1], bricks[2], bricks[3]];
+
+
+        modarray[0] = new THREE.Mesh( geometry, material[0]);   modarray[1] = new THREE.Mesh( geometry2, material[0]);
+
+    modarray[0].position.x=basex;   modarray[0].position.z=1000;
+    modarray[0].position.y=0;
+        scene.add(modarray[0]);
+
+    modarray[1].position.x=basex+65;    modarray[1].position.z=1000;
+    modarray[1].position.y=0;
+        scene.add(modarray[0]);     scene.add(modarray[1]);
+
+    //////////  // LIGHT//  //////////  var light2 = new
+THREE.AmbientLight(0xffffff);   light2.position.set(0,100,2000);
+    scene.add(light2);
+
+
+}
+
+
+//////////////////// // Animation Loop // ///////////////////
+function animate()  {
+
+        requestAnimationFrame( animate ); var flag=0;
+
+    for(n=0; n<2; n++)  {
+
+            modarray[n].rotation.x=rotation;
+
+    }       rotation+=0.03;
+
+    renderer.render( scene, camera );
+
+
+}
+
+</script> <p>The cube on the left is with UV mapping to correct the
+back surface.
+
+The cube on the right is without the UV mapping.</p> </body>
+
+</html>

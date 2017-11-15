@@ -15,6 +15,8 @@
 	<script src="${pageContext.request.contextPath}/jsp_folder/libs/sim.js"></script>
 	<script src="${pageContext.request.contextPath}/jsp_folder/sim/animation.js"></script>
 <script src="${pageContext.request.contextPath}/jsp_folder/js/myFIDO.js"></script>
+<script src="${pageContext.request.contextPath}/jsp_folder/js/myFIDO1.js"></script>
+
 
 <style type="text/css">
 body {
@@ -32,6 +34,7 @@ body {
 			function() {
 				var container = document.getElementById("container");
 				var app = new MyApp();
+				//var app = new myFIDO1();
 				app.init({ container: container });
 				app.run();
 			}
