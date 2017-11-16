@@ -53,8 +53,8 @@ body {
 	<h3>Nhấp chọn vào từng khối để xem</h3>
 	</center>
 	
-    <div id="container" style="width:95%; height:80%; position:absolute;"></div>
-			<div id="prompt" style="width:95%; height:6%; bottom:0; text-align:center; position:absolute;">
+    <div id="container" style="width:100%; height:80%; position:absolute;"></div>
+			<div id="prompt" style="width:100%; height:6%; bottom:0; text-align:center; position:absolute;">
 	<a href="${pageContext.request.contextPath}/">Trang chủ</a> | <a href="${pageContext.request.contextPath}/Howuse">Làm mới</a>
 	</div>
 

@@ -80,7 +80,7 @@ p, a span {
 		</div>
 		
 		<div id="prompt" style="width:100%; height:6%; bottom:0; text-align:center; position:absolute; padding-top: 15px;">
-	<a href="${pageContext.request.contextPath}/">Trang chủ</a> | <a href="${pageContext.request.contextPath}/FIDOuafReg">Làm mới</a>
+	<a href="${pageContext.request.contextPath}/">Trang chủ</a> | <a href="${pageContext.request.contextPath}/FIDOuafReg">Làm mới</a>| <a href="${pageContext.request.contextPath}/Fidouaf">Trở về</a>
 	</div>
 	<script>
 	var iid = 0;//capture times

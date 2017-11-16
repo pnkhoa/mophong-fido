@@ -55,13 +55,15 @@ p, a span {
 						<a href="${pageContext.request.contextPath}/"><img style="width: 50px;height: 50px;" alt="" src="${pageContext.request.contextPath}/jsp_folder/images/home.png" >&nbsp; </a>
 			<img style="width: 50px;height: 50px;" alt="" src="${pageContext.request.contextPath}/jsp_folder/images/Play1Hot.png" onclick="showSteps();">&nbsp;
 		<a href="${pageContext.request.contextPath}/h2uUAF"><img style="width: 50px;height: 50px;" alt="" src="${pageContext.request.contextPath}/jsp_folder/images/reload.png" >  </a>
+<%-- 		&nbsp;
+		<a href="${pageContext.request.contextPath}/Howuse"><img style="width: 50px;height: 50px;" alt="" src="${pageContext.request.contextPath}/jsp_folder/images/back.png" >  </a> --%>
 		
 			
 		</div>
    		<div  id="container" style="width:100%; height:80%; position:absolute; text-align:center;"></div>
 		
 		<div id="prompt" style="width:100%; height:6%; bottom:0; text-align:center; position:absolute;">
-	<a href="${pageContext.request.contextPath}/">Trang chủ</a> | <a href="${pageContext.request.contextPath}/h2uUAF">Làm mới</a>
+	<a href="${pageContext.request.contextPath}/">Trang chủ</a> | <a href="${pageContext.request.contextPath}/h2uUAF">Làm mới</a>| <a href="${pageContext.request.contextPath}/Howuse">Trở về</a>
 	</div>
 	</body>
 </html>

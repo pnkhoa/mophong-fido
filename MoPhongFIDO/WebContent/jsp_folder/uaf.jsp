@@ -62,7 +62,7 @@ body {
     
     </div> 
 			<div id="prompt" style="width:100%; height:6%; bottom:0; text-align:center; position:absolute;">
-	<a href="${pageContext.request.contextPath}/">Trang chủ</a> | <a href="${pageContext.request.contextPath}/Fidou2f">Làm mới</a>
+	<a href="${pageContext.request.contextPath}/">Trang chủ</a> | <a href="${pageContext.request.contextPath}/Fidou2f">Làm mới</a>| <a href="${pageContext.request.contextPath}/Fidowork">Trở về</a>
 	</div>
 
 </body>

@@ -48,7 +48,7 @@ Cube.prototype.init = function(x,y,z, name, imagepath)
     cube.rotation.x = Math.PI / 5;
     cube.rotation.y = Math.PI / 5;
     cube.position.set( x,y,z);
-    cube.scale.set(1.5, 1.5, 1.5);
+    cube.scale.set(2, 2, 2);
 
     // Add the cube to our scene
     this.setObject3D(cube);
